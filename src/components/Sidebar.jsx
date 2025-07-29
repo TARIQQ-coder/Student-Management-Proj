@@ -5,6 +5,8 @@ import { LuBadgeCheck } from "react-icons/lu";
 import { MdPeopleAlt, MdLogout } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
 import { IoIosSettings } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,18 +47,33 @@ const Sidebar = () => {
 
           <ul className="flex flex-col justify-between flex-1">
             <div className="space-y-2">
-              <li className="flex items-center p-2 bg-gray-800 rounded cursor-pointer">
-                <span className="mr-2">
-                  <PiListBulletsFill />
-                </span>{" "}
-                Overview
-              </li>
-              <li className="flex items-center p-2 hover:bg-gray-800 rounded cursor-pointer">
-                <span className="mr-2">
-                  <FaGraduationCap />
-                </span>{" "}
-                Classes
-              </li>
+              <li className="cursor-pointer rounded">
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 rounded ${
+        isActive ? 'bg-gray-800' : 'hover:bg-gray-800'
+      }`
+    }
+  >
+    <span className="mr-2"><PiListBulletsFill /></span>
+    Overview
+  </NavLink>
+</li>
+
+<li className="cursor-pointer rounded">
+  <NavLink
+    to="/classes"
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 rounded ${
+        isActive ? 'bg-gray-800' : 'hover:bg-gray-800'
+      }`
+    }
+  >
+    <span className="mr-2"><FaGraduationCap /></span>
+    Classes
+  </NavLink>
+</li>
               <li className="flex items-center p-2 hover:bg-gray-800 rounded cursor-pointer">
                 <span className="mr-2">
                   <LuBadgeCheck />
