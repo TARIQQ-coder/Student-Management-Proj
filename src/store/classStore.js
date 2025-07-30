@@ -26,7 +26,7 @@ export const useClassStore = create((set) => ({
       teacher: 'Dr. Johnson',
       schedule: 'Tue & Thu - 2:00 PM',
       description: 'Dive deep into calculus and linear algebra.',
-      icon: 'SiBookstack',
+      icon: 'PiMathOperationsFill',
       subjectDetails: [
         {
           title: 'Calculus',

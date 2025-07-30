@@ -11,7 +11,7 @@ const Grades = () => {
       <div className="space-y-4">
 
 
-        <div className="flex items-center justify-between bg-white px-6 py-10 rounded-2xl mt-8">
+        <div className="flex items-center justify-between bg-white px-6 py-10 rounded-2xl mt-8 ">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 rounded-full border-gray-500 border flex items-center justify-center">
               <IoDocumentTextOutline className="text-lg text-gray-700" />

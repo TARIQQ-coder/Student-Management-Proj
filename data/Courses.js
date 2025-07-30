@@ -1,4 +1,6 @@
 import { SiBookstack, SiGoogleclassroom, SiCodeforces } from "react-icons/si";
+import { RiEnglishInput } from "react-icons/ri";
+import { PiMathOperationsFill } from "react-icons/pi";
 
 const courses = [
   {
@@ -8,7 +10,7 @@ const courses = [
     students: 34,
     lessonProgress: "Lesson 8/12",
     percent: 67,
-    icon: SiBookstack,
+    icon: RiEnglishInput,
     iconColor: "text-indigo-600",
   },
   {
@@ -18,7 +20,7 @@ const courses = [
     students: 28,
     lessonProgress: "Lesson 5/10",
     percent: 50,
-    icon: SiGoogleclassroom,
+    icon: PiMathOperationsFill,
     iconColor: "text-blue-600",
   },
   {
