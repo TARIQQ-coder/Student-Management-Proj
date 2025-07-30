@@ -15,7 +15,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-2">
           <div className="col-span-3 bg-white p-4 rounded">
             <div className="flex justify-between items-center mb-6 border-b pb-2">
-              <h1 className="text-2xl font-bold ml-6">Overview</h1>
+              <h1 className="text-2xl font-semibold ml-6">Overview</h1>
               <div className="flex items-center space-x-2">
                 <div className="flex items-center space-x-2">
                   <div className="relative">

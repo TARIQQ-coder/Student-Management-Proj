@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard';
 import ClassList from './components/ClassList';
 import ClassDetail from './components/ClassDetail';
+import GradePanel from './components/GradePanel';
 
 const App = () => {
   return (
@@ -12,9 +13,10 @@ const App = () => {
         <Sidebar />
         <div className="col-span-5 p-4">
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            {/* <Route path="/" element={<Dashboard />} />
             <Route path="/classes" element={<ClassList />} />
-            <Route path="/classes/:id" element={<ClassDetail />} />
+            <Route path="/classes/:id" element={<ClassDetail />} /> */}
+            <Route path="/" element={<GradePanel/>}/>
           </Routes>
         </div>
       </div>
