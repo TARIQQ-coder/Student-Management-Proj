@@ -7,8 +7,8 @@ const SemesterTabs = ({ active, onChange }) => {
         <button
           key={label}
           onClick={() => onChange(idx)}
-          className={`px-4 py-2 rounded-full text-sm border ${
-            active === idx ? 'bg-black text-white' : 'bg-gray-100 text-gray-600'
+          className={`px-4 py-2 rounded-full text-sm border  ${
+            active === idx ? 'bg-[#f9f9f9] text-black font-semibold border-black' : 'bg-white text-gray-700 border-[#dad9d9]'
           }`}
         >
           {label}

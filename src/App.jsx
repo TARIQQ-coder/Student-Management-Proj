@@ -6,6 +6,7 @@ import ClassList from './components/ClassList';
 import ClassDetail from './components/ClassDetail';
 import GradeComponent from './components/GradeComponent';
 
+
 const App = () => {
   return (
     <Router>
@@ -13,10 +14,10 @@ const App = () => {
         <Sidebar />
         <div className="col-span-5 p-4">
           <Routes>
-            {/* <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/classes" element={<ClassList />} />
-            <Route path="/classes/:id" element={<ClassDetail />} /> */}
-            <Route path="/" element={<GradeComponent/>}/>
+            <Route path="/classes/:id" element={<ClassDetail />} />
+            <Route path="/grades" element={<GradeComponent/>}/>
           </Routes>
         </div>
       </div>

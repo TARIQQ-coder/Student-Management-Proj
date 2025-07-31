@@ -74,24 +74,45 @@ const Sidebar = () => {
     Classes
   </NavLink>
 </li>
-              <li className="flex items-center p-2 hover:bg-gray-800 rounded cursor-pointer">
-                <span className="mr-2">
-                  <LuBadgeCheck />
-                </span>{" "}
-                Grades
-              </li>
-              <li className="flex items-center p-2 hover:bg-gray-800 rounded cursor-pointer">
-                <span className="mr-2">
-                  <MdPeopleAlt />
-                </span>{" "}
-                Teachers
-              </li>
-              <li className="flex items-center p-2 hover:bg-gray-800 rounded cursor-pointer">
-                <span className="mr-2">
-                  <FiEdit />
-                </span>{" "}
-                Notes
-              </li>
+              <li className="cursor-pointer rounded">
+  <NavLink
+    to="/grades"
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 rounded ${
+        isActive ? 'bg-gray-800' : 'hover:bg-gray-800'
+      }`
+    }
+  >
+    <span className="mr-2"><LuBadgeCheck /></span>
+    Grades
+  </NavLink>
+</li>
+              <li className="cursor-pointer rounded">
+  <NavLink
+    to="/teachers"
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 rounded ${
+        isActive ? 'bg-gray-800' : 'hover:bg-gray-800'
+      }`
+    }
+  >
+    <span className="mr-2"><MdPeopleAlt /></span>
+    Teachers
+  </NavLink>
+</li>
+              <li className="cursor-pointer rounded">
+  <NavLink
+    to="/notes"
+    className={({ isActive }) =>
+      `flex items-center w-full p-2 rounded ${
+        isActive ? 'bg-gray-800' : 'hover:bg-gray-800'
+      }`
+    }
+  >
+    <span className="mr-2"><FiEdit /></span>
+    Notes
+  </NavLink>
+</li>
             </div>
 
             <div className="space-y-2 border-t">

@@ -1,34 +1,64 @@
-const latest = [
-  { subject: 'Mid-term paper', term: 'Summer term', grade: 98 },
-  { subject: 'Art History', term: 'Summer term', grade: 72 },
-  { subject: 'Maths & Numbers', term: 'Summer term', grade: 34 },
-]
-
-const getBadgeColor = (grade) => {
-  if (grade >= 90) return 'bg-green-100 text-green-700'
-  if (grade >= 70) return 'bg-orange-100 text-orange-700'
-  return 'bg-red-100 text-red-700'
-}
+import React from "react";
+import { FaRegNewspaper } from "react-icons/fa6";
+import { GiBrain } from "react-icons/gi";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { PiMathOperationsFill } from "react-icons/pi";
 
 const LatestGrades = () => {
   return (
-    <div className="bg-white rounded-xl p-4 shadow-sm">
-      <h3 className="text-sm font-semibold mb-4 text-gray-700">Latest Grades</h3>
-      <ul className="space-y-3">
-        {latest.map((item, i) => (
-          <li key={i} className="flex justify-between items-center text-sm">
-            <div>
-              <p className="font-medium">{item.subject}</p>
-              <p className="text-gray-500 text-xs">{item.term}</p>
-            </div>
-            <span className={`px-3 py-1 text-xs rounded-full font-semibold ${getBadgeColor(item.grade)}`}>
-              {item.grade}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
+    <div>
+      <h2 className="text-xl font-semibold">Latest Grades</h2>
+      <div className="space-y-4">
 
-export default LatestGrades
+
+        <div className="flex items-center justify-between bg-white p-6  rounded-2xl mt-2 ">
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 rounded-full border-gray-500 border flex items-center justify-center">
+              <IoDocumentTextOutline className="text-lg text-gray-700" />
+            </div>
+            <div>
+              <p>Mid-term paper</p>
+              <p className="text-sm text-gray-500 ml-1">Summer term</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+           <span>98</span>
+           </div>
+        </div>
+
+        <div className="flex items-center justify-between bg-white p-6 rounded-2xl">
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 rounded-full border-gray-500 border flex items-center justify-center">
+              <GiBrain className="text-lg text-gray-700" />
+            </div>
+            <div>
+              <p>Art History</p>
+              <p className="text-sm text-gray-500 ml-1">Summer term</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center">
+           <span>72</span>
+           </div>
+        </div>
+
+        <div className="flex items-center justify-between bg-white p-6 rounded-2xl">
+          <div className="flex items-center space-x-2">
+            <div className="w-10 h-10 rounded-full border-gray-500 border flex items-center justify-center">
+              <PiMathOperationsFill className="text-lg text-gray-700" />
+            </div>
+            <div>
+              <p>Maths & Numbers</p>
+              <p className="text-sm text-gray-500 ml-1">Summer term</p>
+            </div>
+          </div>
+          <div className="w-10 h-10 rounded-full bg-purple-50 flex items-center justify-center">
+           <span>34</span>
+           </div>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default LatestGrades;

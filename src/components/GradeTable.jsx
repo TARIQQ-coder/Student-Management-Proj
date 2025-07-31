@@ -2,16 +2,16 @@ import GradeBadge from './GradeBadge'
 
 const GradeTable = ({ courses }) => {
   return (
-    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-      <table className="w-full text-sm">
-        <thead className="bg-gray-50 text-left">
+    <div className="bg-white rounded-xl border  overflow-hidden border-[#bebbbb]">
+      <table className="w-full text">
+        <thead className="bg-[#f9f9f9] text-left text-[#8f8989] ">
           <tr>
-            <th className="p-3">Class Name</th>
-            <th className="p-3">Exam 1</th>
-            <th className="p-3">Exam 2</th>
-            <th className="p-3">Exam 3</th>
-            <th className="p-3">Final Paper</th>
-            <th className="p-3">Final Grade</th>
+            <th className="p-3 font-medium">Class Name</th>
+            <th className="p-3 font-medium">Exam 1</th>
+            <th className="p-3 font-medium">Exam 2</th>
+            <th className="p-3 font-medium">Exam 3</th>
+            <th className="p-3 font-medium">Final Paper</th>
+            <th className="p-3 font-medium">Final Grade</th>
           </tr>
         </thead>
         <tbody>
