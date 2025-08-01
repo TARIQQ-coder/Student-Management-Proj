@@ -1,5 +1,5 @@
 import { Mail, Phone, MoreHorizontal } from 'lucide-react'
-import ProfileImage2 from '../assets/ProfileImage2.jpg' 
+import ProfileImage2 from '../assets/ProfileImage2.JPG' 
 
 
 const tagColors = {
