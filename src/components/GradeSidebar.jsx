@@ -5,7 +5,7 @@ import NextExamCard from './NextExamCard'
 
 const GradeSidebar = () => {
   return (
-    <div className="w-full lg:w-[45%] p-4 space-y-4 bg-[#e2dfdf] rounded-lg md:ml-2">
+    <div className="w-full lg:w-[45%] p-4 space-y-4 bg-[#f5f1f1] rounded-lg md:ml-2">
       <StudentProfile />
       <LatestGrades />
       <NextExamCard />

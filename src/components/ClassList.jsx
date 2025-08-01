@@ -41,7 +41,7 @@ const ClassList = () => {
           ))}
         </div>
 
-        <div className="flex flex-col justify-between bg-[#e7e3e3] px-4  rounded pt-2">
+        <div className="flex flex-col justify-between bg-[#f5f1f1] px-4  rounded pt-2">
           {/* Right side: Enrolled classes */}
           <div className="w-full md:w-[300px]">
             <h2 className="text-xl font-bold mb-4">Enrolled Classes</h2>

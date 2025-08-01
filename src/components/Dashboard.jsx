@@ -41,7 +41,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="col-span-2 space-y-4">
-            <div className="bg-[#e7e3e3] px-4 py-6 rounded pb-8">
+            <div className="bg-[#f5f1f1] px-4 py-6 rounded pb-8">
               <OngoingLesson />
               <Grades />
               <Inbox />

@@ -9,7 +9,7 @@ const GradeComponent = () => {
   return (
     <div>
       <div className="flex justify-between items-center  border-b pb-2">
-        <h1 className="text-2xl font-semibold ml-6">Classes</h1>
+        <h1 className="text-2xl font-semibold ml-6">Grades</h1>
         <div className="flex items-center space-x-2">
           <div className="flex items-center space-x-2">
             <div className="relative">

@@ -1,25 +1,14 @@
-import React, { useState } from 'react'
-import CategoryFilters from './CategoryFilters'
-import TeacherGrid from './TeacherGrid'
-import { teachers as allTeachers } from '../../data/teachers'
+
+import NoteContent from './NoteContent'
+import NoteSidebar from './NoteSidebar'
 import { CiSearch, CiMail } from "react-icons/ci";
 import { IoIosNotificationsOutline } from "react-icons/io";
 
-const TeacherSection = () => {
-  const [activeCategory, setActiveCategory] = useState('All Teachers')
-
-  // Filter logic
-  const filteredTeachers =
-    activeCategory === 'All Teachers'
-      ? allTeachers
-      : allTeachers.filter((teacher) =>
-          teacher.subjects.includes(activeCategory)
-        )
-
+const NoteView = () => {
   return (
-    <section className=" bg-white min-h-screen">
-      <div className="flex justify-between items-center mb-6 border-b pb-2">
-                    <h1 className="text-2xl font-semibold ml-6">Teachers</h1>
+    <div>
+      <div className="flex justify-between items-center  border-b pb-2">
+                    <h1 className="text-2xl font-semibold ml-6">Notes</h1>
                     <div className="flex items-center space-x-2">
                       <div className="flex items-center space-x-2">
                         <div className="relative">
@@ -40,14 +29,14 @@ const TeacherSection = () => {
                     </div>
                   </div>
 
-      <CategoryFilters
-        activeCategory={activeCategory}
-        onChangeCategory={setActiveCategory}
-      />
-
-      <TeacherGrid teachers={filteredTeachers} />
-    </section>
+    <div className="flex flex-col lg:flex-row p-6 bg-white min-h-screen ">
+      <div className="w-full m-2">
+        <NoteContent />
+      </div>
+    <NoteSidebar/>
+    </div>
+    </div>
   )
 }
 
-export default TeacherSection
+export default NoteView

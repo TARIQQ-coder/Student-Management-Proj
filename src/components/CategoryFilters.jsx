@@ -12,7 +12,7 @@ const categories = [
 
 const CategoryFilters = ({ activeCategory, onChangeCategory }) => {
   return (
-    <div className="flex flex-wrap gap-2 mb-6">
+    <div className="flex flex-wrap gap-2 mb-6 pl-8">
       {categories.map((category) => (
         <button
           key={category}

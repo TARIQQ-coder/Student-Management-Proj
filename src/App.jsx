@@ -6,6 +6,7 @@ import ClassList from './components/ClassList';
 import ClassDetail from './components/ClassDetail';
 import GradeComponent from './components/GradeComponent';
 import TeacherSection from './components/TeacherSection';
+import NoteView from './components/NoteView';
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/classes/:id" element={<ClassDetail />} />
             <Route path="/grades" element={<GradeComponent/>}/>
             <Route path='/teachers' element={<TeacherSection/>}/>
+            <Route path='/notes' element={<NoteView/>}/>
           </Routes>
         </div>
       </div>
