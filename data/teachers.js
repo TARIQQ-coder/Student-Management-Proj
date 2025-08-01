@@ -1,5 +1,5 @@
 import ProfileImage1 from '../src/assets/ProfileImage.jpeg'
-import ProfileImage2 from '../src/assets/ProfileImage2.jpg'
+import ProfileImage2 from '../src/assets/ProfileImage2.JPG'
 
 export const teachers = [
   {

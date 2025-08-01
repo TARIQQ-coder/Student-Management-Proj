@@ -5,6 +5,7 @@ import { IoBriefcaseOutline } from "react-icons/io5";
 import { PiMathOperationsFill } from "react-icons/pi";
 import { SlBookOpen } from "react-icons/sl";
 import { FaAngleRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ClassMaterials = () => {
   return (
@@ -49,9 +50,11 @@ const ClassMaterials = () => {
               <p>Your Notes</p>
             </div>
           </div>
+          <Link to='/notes'>
           <div className="mr-2">
            <FaAngleRight className="w-6 h-6 cursor-pointer"/>
            </div>
+          </Link>
         </div>
 
       </div>
