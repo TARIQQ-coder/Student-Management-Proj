@@ -3,7 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useClassStore } from '../store/classStore';
 import { FaChalkboardTeacher } from 'react-icons/fa';
 import { BsClock } from 'react-icons/bs';
-import { SiGoogleclassroom } from 'react-icons/si';
+import { SiGoogleclassroom, SiCodeforces } from 'react-icons/si';
+import { PiMathOperationsFill } from 'react-icons/pi';
 
 const ClassDetail = () => {
   const { id } = useParams();
@@ -11,12 +12,20 @@ const ClassDetail = () => {
   const getClassById = useClassStore((state) => state.getClassById);
   const classData = getClassById(id);
 
+  const iconMap = {
+    SiGoogleclassroom: SiGoogleclassroom,
+    PiMathOperationsFill: PiMathOperationsFill,
+    SiCodeforces: SiCodeforces,
+  };
+
+  const IconComponent = iconMap[classData?.icon];
+
   if (!classData) {
     return <p className="p-4 text-red-500">Class not found.</p>;
   }
 
   return (
-    <div className="p-6 max-w-2xl mx-auto bg-white rounded-2xl shadow space-y-6">
+    <div className="p-6 max-w-4xl mx-auto bg-white rounded-2xl space-y-6">
       <button
         onClick={() => navigate(-1)}
         className="text-sm text-blue-500 hover:underline"
@@ -25,7 +34,7 @@ const ClassDetail = () => {
       </button>
 
       <div className="flex items-center space-x-4">
-        <SiGoogleclassroom className="w-10 h-10 text-green-600" />
+        {IconComponent && <IconComponent className="w-10 h-10 text-green-600" />}
         <h1 className="text-2xl font-bold">{classData.title}</h1>
       </div>
 
@@ -53,8 +62,10 @@ const ClassDetail = () => {
                 key={index}
                 className="border p-3 rounded-lg bg-gray-50 text-gray-700"
               >
-                <h3 className="text-lg font-medium">{subject.title}</h3>
-                <p className="text-sm">{subject.detail}</p>
+                <div className="flex items-center space-x-2">
+                  <h3 className="text-lg font-medium">{subject.title}</h3>
+                </div>
+                <p >{subject.detail}</p>
               </li>
             ))}
           </ul>
